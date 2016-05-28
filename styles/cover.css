@@ -1,0 +1,207 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.navbar-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 125%;
+  margin: 5px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background: #333;
+  background: -webkit-linear-gradient(left top, gray, black);
+  background: -o-linear-gradient(bottom right, gray, black);
+  background: -moz-linear-gradient(bottom right, gray, black);
+  background: linear-gradient(to bottom right, gray, black);
+}
+body {
+  color: #fff;
+  font-family: 'Arvo', serif;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+.grid-text {
+  position: absolute;
+  z-index: 10;
+  top: 10%;
+  left: 2%;
+  right: 2%;
+  display: none;
+  font-size: 125%;
+}
+
+.grid-header-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 150%;
+}
+
+.text,
+.text-desc {
+  font-family: 'Arvo', serif;
+}
+
+.text-desc {
+  font-style: italic;
+}
+
+#cover-logo {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 5%;
+}
+
+#covervid {
+  position: relative;
+  z-index: 0;
+}
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #333; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, gray, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, gray, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, gray, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, gray, black); /* Standard syntax */;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.33%;
+}
+
+.grid-item {
+  float: left;
+/*  border: 1px solid #fff;
+*/}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+ * Affix and center
+ */
+
+@media screen and (max-width: 999px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+
+  #cover-logo {
+    display: none;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: left;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: 80%;
+  }
+}
