@@ -86,13 +86,26 @@ body {
 #cover-logo {
   position: absolute;
   z-index: 1;
-  top: 20%;
+  top: 15%;
   left: 5%;
+}
+
+#cover-text {
+  display: block;
+  font-family: 'Arvo', sans-serif;
+  font-size: 250%;
 }
 
 #covervid {
   position: relative;
   z-index: 0;
+}
+
+#mobile-desc {
+  display: none;
+  font-family: 'Arvo', sans-serif;
+  font-size: 120%;
+  margin: 5px;
 }
 
 * { box-sizing: border-box; }
@@ -156,6 +169,10 @@ body { font-family: sans-serif; }
 
   #cover-logo {
     display: none;
+  }
+
+  #mobile-desc {
+    display: block;
   }
 
   .navbar-header {
