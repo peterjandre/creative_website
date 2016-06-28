@@ -30,6 +30,16 @@ a:hover {
   float: none;
 }
 
+.media-right, .navbar-header {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+.media-right:hover, .navbar-header:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
 /*
  * Base structure
  */
@@ -240,6 +250,97 @@ h3 {
 
 .modal-title {
   font-size: 200%;
+}
+
+#reunionheader {
+  position: fixed;
+  background-image: url(../img/bg2.jpg);
+  padding-top: 10px;
+  margin-top: 25px;
+  left: 0;
+  z-index: 1;
+}
+
+.reunionsplash {
+  background-image: url(../img/reunionsplash.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#pin4 {
+  visibility: hidden;
+  background-image: url(../img/reunionsplash2.jpg);
+}
+
+#reuniontitle {
+  position: absolute;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 500%;
+  margin-left: 100px;
+  margin-top: 300px;
+  z-index: 10;
+  color: white;
+}
+
+.reunionplaytext {
+  /*background-image: url(../img/bg1.jpg); */
+  font-family: 'Arvo', serif;
+  font-size: 125%;
+  width: 50%;
+  padding-top: 40px;
+  margin-top: 10px; 
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+.spncplaytext {
+  background-image: url(../img/bg1.jpg); 
+  font-family: 'Arvo', serif;
+  font-size: 125%;
+  width: 50%;
+  padding-top: 40px;
+  margin-top: 40px; 
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+#spncsplash {
+  background-image: url(../img/parkbench.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#nametag {
+  width: 60%;
+  margin: auto;
+}
+
+.stagedir, .paren {
+  font-style: italic;
+}
+
+#pin2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/reunionpic1.jpg);
+  background-size: cover;
+}
+
+#backtotop {
+  position: fixed;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.6);
+  border: 1px solid white;
+  font-family: "Quicksand", sans-serif;
+  color: black;
+  z-index: 10;
 }
 
 * { box-sizing: border-box; }
