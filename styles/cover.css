@@ -2,6 +2,7 @@
  * Globals
  */
 
+
 /* Links */
 a,
 a:focus,
@@ -86,6 +87,16 @@ h3 {
   right: 2%;
   display: none;
   font-size: 125%;
+}
+
+.grid-item:hover .grid-text {
+  display: block;
+}
+
+.grid-item:hover img {
+  opacity: 0.1;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s; /* Safari */
 }
 
 .grid-header-text {
