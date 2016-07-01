@@ -142,7 +142,7 @@ h3 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(../img/playcurtain.png);
+  background-image: url(../images/playcurtain.png);
   background-repeat: no-repeat;
   background-size: 400%;
 }
@@ -217,11 +217,11 @@ h3 {
 }
 
 #fifth {
-  background-image: url(../img/spnc01.jpg);
+  background-image: url(../images/spnc01.jpg);
 }
 
 #sixth {
-  background-image: url(../img/spnc02.jpg);
+  background-image: url(../images/spnc02.jpg);
 }
 
 .playimg {
@@ -265,7 +265,7 @@ h3 {
 
 #reunionheader {
   position: fixed;
-  background-image: url(../img/bg2.jpg);
+  background-image: url(../images/bg2.jpg);
   padding-top: 10px;
   margin-top: 25px;
   left: 0;
@@ -273,7 +273,7 @@ h3 {
 }
 
 .reunionsplash {
-  background-image: url(../img/reunionsplash.jpg);
+  background-image: url(../images/reunionsplash.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -281,7 +281,7 @@ h3 {
 
 #pin4 {
   visibility: hidden;
-  background-image: url(../img/reunionsplash2.jpg);
+  background-image: url(../images/reunionsplash2.jpg);
 }
 
 #reuniontitle {
@@ -306,7 +306,7 @@ h3 {
 }
 
 .spncplaytext {
-  background-image: url(../img/bg1.jpg); 
+  background-image: url(../images/bg1.jpg); 
   font-family: 'Arvo', serif;
   font-size: 125%;
   width: 50%;
@@ -317,7 +317,7 @@ h3 {
 }
 
 #spncsplash {
-  background-image: url(../img/parkbench.jpg);
+  background-image: url(../images/parkbench.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -335,7 +335,7 @@ h3 {
 #pin2 {
   width: 100%;
   height: 100%;
-  background-image: url(../img/reunionpic1.jpg);
+  background-image: url(../images/reunionpic1.jpg);
   background-size: cover;
 }
 
@@ -394,6 +394,10 @@ body { font-family: sans-serif; }
 /*
  * Affix and center
  */
+
+@media screen and (min-width: 1000px) {
+/* place hover effect here for only desktop windows larger than 1000px */
+}
 
 @media screen and (max-width: 999px) {
   /* Start the vertical centering */

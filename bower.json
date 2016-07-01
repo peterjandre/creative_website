@@ -1,0 +1,25 @@
+{
+  "name": "notthatpeterandre",
+  "homepage": "https://github.com/peterjandre/creative_website",
+  "authors": [
+    "Peter Andre <peterjandre@gmail.com>"
+  ],
+  "description": "personalwebsite",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "imagesloaded": "^4.1.0",
+    "jquery": "^2.2.4",
+    "gsap": "^1.18.5",
+    "masonry": "desandro/masonry#^4.1.0",
+    "scrollmagic": "^2.0.5"
+  }
+}

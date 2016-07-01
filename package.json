@@ -1,0 +1,24 @@
+{
+  "name": "notthatpeterandre",
+  "version": "1.0.0",
+  "description": "personalwebsite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterjandre/creative_website.git"
+  },
+  "author": "Peter Andre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterjandre/creative_website/issues"
+  },
+  "homepage": "https://github.com/peterjandre/creative_website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
+}
