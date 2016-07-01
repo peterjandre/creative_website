@@ -3,5 +3,5 @@ node_modules
 .DS_Store
 .sass-cache/*
 .sass-cache
-styles/.sass-cache/*
-styles/.sass-cache
+app/styles/.sass-cache/*
+app/styles/.sass-cache
