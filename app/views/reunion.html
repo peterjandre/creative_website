@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../styles/cover.css" rel="stylesheet">
+    <script src="../scripts/modernizr-custom.js" type="text/javascript"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +44,7 @@
         <ul class="nav navbar-nav">
             <li class="navbar-text"><a href="#">FEATURES</a></li>
             <li class="navbar-text"><a href="plays.html">PLAYS</a></li>
-            <li class="navbar-text"><a href="#">BOOKS</a></li>
+            <li class="navbar-text"><a href="books.html">BOOKS</a></li>
             <li class="navbar-text"><a href="#">VIDEOS</a></li>
           </ul>       
           <ul class="nav navbar-nav navbar-right">
@@ -66,37 +67,30 @@
         <h4 class="modal-title">This play is FREE to read, FREE to perform.</h4>
       </div>
       <div class="modal-body">
-        <p>This short play has been published here in its entirety, and exists in the public domain [Creative Commons License] format. You may read it for fun, produce it and sell tickets to a production of it, or do anything in between those two extremes. If you do produce it, all I ask is that you credit me and email or tweet at me so I know it's being produced somewhere -- that way I can promote your show too!<br /><br />Read more about the Creative Commons License here.</p>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <p>The short plays on this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may read it for fun, produce it commercially, or do anything in between those two extremes. If you do produce it, all I ask is that you credit me and contact me so I know it's being produced somewhere - that way I can promote your show too!</p>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-<!--     <div id="reunionheader">
-      <h1>Reunion</h1>
-      <p>Production History</p>
-      <p>PDF Version</p>
-      <p>Performing This Material</p>
-    </div> -->
+    </div>
+  </div>
+</div>
 
 <div id="trigger3"></div>
-  <div id="reuniontitle">Reunion</div>
+  <div id="reuniontitle"><h1>Reunion</h1></div>
 <div id="pin3" class="reunionsplash">
 </div>
 
 <a href="#"><div id="backtotop">
-  BACK TO TOP</br>
+  TOP<br />
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
 
+<div class="container">
     <div class="reunionplaytext">
       <p><span class="stagedir">
         A ten-year high school reunion. A "CLASS OF 2006" banner hangs up-center stage. Guilty pleasure pop hits from 2005 and 2006 play throughout.
       </span></p>
     </div>
-    <div>
+    <div id="spotify">
       <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A5baU2nNxC8ag8XzlHNsANg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
     </div>
     <div class="reunionplaytext"> 
@@ -105,8 +99,8 @@
       </span></p>
     </div>
     <div id="trigger1"></div>
-    <div id="pin1" class="reunionplaytext"> 
-      <img id="nametag" src="../images/nametag.png">
+    <div id="pin1" class="reunionplaytext">
+      <div id="nametag"></div>
     </div>
     <div class="reunionplaytext"> 
       <p>
@@ -328,9 +322,9 @@ Aww, I liked you better when you were knocked up.</p>
 <div class="reunionplaytext">
   <p><span class="stagedir">She flicks him off as she exits. Dan starts checking out the room.</span></p>
 </div>
-<div id="trigger2">
+<div id="trigger22">
 </div>
-<div id="pin2">
+<div id="pin22">
 </div>
 
 <div class="reunionplaytext">
@@ -692,6 +686,7 @@ Me too.</p>
 <div class="reunionplaytext">
   <p><span class="stagedir">They exit skipping, hand in hand. Blackout.</span></p>
 </div>
+</div>
 
 
   <script src="../../bower_components/jquery/dist/jquery.js"></script>
@@ -704,57 +699,71 @@ Me too.</p>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js"></script>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-  <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>    
+  <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+  <script src="../../bower_components/js-cookie/src/js.cookie.js"></script>    
   <script type="text/javascript">
   $(function () { // wait for document ready
-    $(window).load(function(){
-      // $('#playModal').modal("show");
-      console.log("modal launched.");
-  // init controller
-  var controller = new ScrollMagic.Controller();
-          // build scene
-    var scene = new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: 400, 
-      offset: 150
-    })          
-            .setPin("#pin1")
-            .addIndicators({name: "1 (duration: 400)"})
-            .addTo(controller);
+    
+    var modalCookie = Cookies.get("readModal")
 
-    var scene2 = new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-    })
-            .setTween("#backtotop", {autoAlpha:1})
-            .addTo(controller);
+    if (modalCookie == "yes") {
+      console.log("cookie is on system")
+    } else {
+      Cookies.set('readModal', 'yes', {expires: 7});
+      $('#playModal').modal("show");
+      console.log("cookie has been set, modal is shown")
+    };
 
-    var wipeScene = new ScrollMagic.Scene({
-      triggerElement: "#trigger2",
-      duration: 1000,
-      offset: 300
-    })
-            .setPin("#pin2")
-            .setTween("#pin2", {autoAlpha:0, rotationY: 90})
-            .addIndicators({name: "2"})
-            .addTo(controller)
 
-    var openScene = new ScrollMagic.Scene({
-      triggerElement: "#trigger3",
-      duration: 1500,
-      offset: 350
-    })
-            .setPin("#pin3")
-            .addIndicators({name: "open"})
-            .addTo(controller)
-
+    $('#backtotop').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 'slow');
+      return false;
     });
 
-  $('#backtotop').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 'slow');
-      return false;
-  });
+    if (!Modernizr.touchevents) {
+      
+      $("#spotify").css("display", "block")    
+      // init controller
+      var controller = new ScrollMagic.Controller();
+      
+      // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+          duration: 400, 
+          offset: 150
+        })          
+                .setPin("#pin1")
+                .addIndicators({name: "1 (duration: 400)"})
+                .addTo(controller);
+
+        var scene2 = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+        })
+                .setTween("#backtotop", {autoAlpha:1})
+                .addTo(controller);
+
+        var wipeScene = new ScrollMagic.Scene({
+          triggerElement: "#trigger22",
+          duration: 1000,
+          offset: 300
+        })
+                .setPin("#pin22")
+                .setTween("#pin22", {autoAlpha:0, rotationY: 90})
+                .addIndicators({name: "2"})
+                .addTo(controller)
+
+        var openScene = new ScrollMagic.Scene({
+          triggerElement: "#trigger3",
+          duration: 1500,
+          offset: 350
+        })
+                .setPin("#pin3")
+                .addIndicators({name: "open"})
+                .addTo(controller)
+    }
 
   });
+
   </script>
   </body>
 

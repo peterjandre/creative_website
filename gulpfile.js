@@ -11,7 +11,10 @@ gulp.task('build-css', function() {
 gulp.task('bs-start', function() {
   bs.init({
     server: {
-      baseDir: "./"
+      baseDir: "app",
+      routes: {
+        '/bower_components': 'bower_components',
+      }
     }
   })
 })

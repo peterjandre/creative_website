@@ -20,6 +20,9 @@
     "jquery": "^2.2.4",
     "gsap": "^1.18.5",
     "masonry": "desandro/masonry#^4.1.0",
-    "scrollmagic": "^2.0.5"
-  }
+    "scrollmagic": "^2.0.5",
+    "js-cookie": "^2.1.2",
+    "iscroll": "^5.2.0"
+  },
+  "devDependencies": {}
 }

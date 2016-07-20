@@ -43,7 +43,7 @@
         <ul class="nav navbar-nav">
             <li class="navbar-text"><a href="#">FEATURES</a></li>
             <li class="navbar-text"><a href="plays.html">PLAYS</a></li>
-            <li class="navbar-text"><a href="#">BOOKS</a></li>
+            <li class="navbar-text"><a href="books.html">BOOKS</a></li>
             <li class="navbar-text"><a href="#">VIDEOS</a></li>
           </ul>       
           <ul class="nav navbar-nav navbar-right">
@@ -688,15 +688,21 @@
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js"></script>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-  <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>    
+  <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+  <script src="../../bower_components/js-cookie/src/js.cookie.js"></script>        
   <script type="text/javascript">
   $(function () { // wait for document ready
-    $(window).load(function(){
-      // $('#playModal').modal("show");
-      console.log("modal launched.");
 
+    var modalCookie = Cookies.get("readModal")
 
-    });
+    if (modalCookie == "yes") {
+      console.log("cookie is on system")
+    } else {
+      Cookies.set('readModal', 'yes', {expires: 7});
+      $('#playModal').modal("show");
+      console.log("cookie has been set, modal is shown")
+    };
+
   });
   </script>
   </body>

@@ -44,7 +44,7 @@
         <ul class="nav navbar-nav">
             <li class="navbar-text"><a href="#">FEATURES</a></li>
             <li class="navbar-text"><a href="views/plays.html">PLAYS</a></li>
-            <li class="navbar-text"><a href="#">BOOKS</a></li>
+            <li class="navbar-text"><a href="views/books.html">BOOKS</a></li>
             <li class="navbar-text"><a href="#">VIDEOS</a></li>
           </ul>       
           <ul class="nav navbar-nav navbar-right">
@@ -61,14 +61,14 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
-          <div class="inner cover">
-        <div id="cover-logo">
-          <img src="images/cover_logo.png">
-          <span id="cover-text">
-            I make the stuff.<br />
-            You look at the stuff.
-          </span>
-        </div>            
+          <div class="inner-cover">
+            <div id="cover-logo">
+              <img src="images/cover_logo.png">
+              <p id="cover-text">
+                I make the stuff.<br />
+                You look at the stuff.
+              </p>
+            </div>            
             <video autoplay loop id="covervid" width="100%">
               <source src="images/seaturtle.mp4" type="video/mp4">
               The video is not working.
@@ -106,7 +106,7 @@
   </div>
   
   <div class="grid-item">
-    <a href="#">    
+    <a href="views/books.html">    
     <img src="images/bam_book.jpg">
     <div class="grid-text">  
       <span class="grid-header-text">Be a Man: How I Spent One Year Drinking, Shaving, Farming, and Fathering My Way Toward Masculinity</span><br /><br />
@@ -169,15 +169,6 @@ $grid.imagesLoaded().progress( function() {
   $grid.masonry();
 });
 
-// $('.grid-item').mouseenter(function(){
-//     $(this).find('img').fadeTo( "slow" , 0.05);
-//     $(this).find('.grid-text').slideDown("slow")
-// });
-
-// $('.grid-item').mouseleave(function(){
-//     $(this).find('img').fadeTo( "slow" , 1);
-//     $(this).find('.grid-text').slideUp("slow")    
-// });
   </script>
   </body>
 

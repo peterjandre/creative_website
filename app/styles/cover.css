@@ -41,6 +41,10 @@ a:hover {
   filter: alpha(opacity=100);
 }
 
+.spacer-nav {
+  height: 50px;
+}
+
 /*
  * Base structure
  */
@@ -59,13 +63,11 @@ body {
 
 h1 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 500%;
   z-index: 10;
 }
 
 h3 {
   font-family: 'Quicksand', sans-serif;
-  text-align: left;
   z-index: 10;
 }
 
@@ -79,29 +81,21 @@ h3 {
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 
+.inner-cover {
+  background-image: url(../images/bg1.jpg);
+}
+
 .grid-text {
   position: absolute;
   z-index: 10;
   top: 10%;
   left: 2%;
   right: 2%;
-  display: none;
-  font-size: 125%;
-}
-
-.grid-item:hover .grid-text {
   display: block;
-}
-
-.grid-item:hover img {
-  opacity: 0.1;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s; /* Safari */
 }
 
 .grid-header-text {
   font-family: 'Quicksand', sans-serif;
-  font-size: 150%;
 }
 
 .text,
@@ -133,7 +127,6 @@ h3 {
 #cover-text {
   display: block;
   font-family: 'Arvo', sans-serif;
-  font-size: 250%;
 }
 
 /*ScrollMagic Plays*/
@@ -143,55 +136,46 @@ h3 {
   height: 100%;
   overflow: hidden;
   background-image: url(../images/playcurtain.png);
-  background-repeat: no-repeat;
-  background-size: 400%;
+  background-size: cover;
 }
 
 #playsheader {
   position: absolute;
-  margin-top: 475px;
+  margin-top: 275px;
   margin-left: 15%;
 }
 
 .playheader {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 50px;
+  position: relative;
+  text-align: left;
+  top: 100px;
+  left: 50px;
 }
 
 .playdesc {
-  position: absolute;
-  margin-top: 300px;
-  margin-left: 50px;
+  position: relative;
+  text-align: left;
+  width: 80%;
+  top: 200px;
+  left: 50px;
 }
 
 .playppl {
-  position: absolute;
-  margin-top: 500px;
-  margin-left: 50px;
+  position: relative;
+  text-align: left;
+  top: 300px;
+  left: 50px;
 }
 
 .readplay {
-  position: absolute;
-  z-index: 10;
-  margin-top: 600px;
+  position: relative;
+  top: 350px;
 }
 
-#pinContainer {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  -webkit-perspective: 1000;
-          perspective: 1000;
-}
-#slideContainer {
-  width: 100%; /* to contain 4 panels, each with 100% of window width */
-  height: 400%;
-}
 .panel {
-  height: 25%;
-  width: 100%; /* relative to parent -> 25% of 400% = 100% of window width */
-  float: left;
+  height: 100%;
+  max-width: 100%;
+  margin-bottom: 200px;
   background-color: transparent;
 }
 
@@ -240,27 +224,16 @@ h3 {
 #mobile-desc {
   display: none;
   font-family: 'Arvo', sans-serif;
-  font-size: 120%;
   margin: 5px;
 }
 
-.modal, .modal-title {
+#playModal {
   color: black;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 120%;
-  font-weight: bold;
   text-shadow: none;
 }
 
-.modal-content, .modal-dialog {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
-
-.modal-title {
-  font-size: 200%;
+.modal-body a {
+  color: blue;
 }
 
 #reunionheader {
@@ -279,6 +252,10 @@ h3 {
   height: 100%;
 }
 
+#spotify {
+  display: none;
+}
+
 #pin4 {
   visibility: hidden;
   background-image: url(../images/reunionsplash2.jpg);
@@ -287,18 +264,15 @@ h3 {
 #reuniontitle {
   position: absolute;
   font-family: 'Quicksand', sans-serif;
-  font-size: 500%;
   margin-left: 100px;
   margin-top: 300px;
-  z-index: 10;
+  z-index: 1;
   color: white;
 }
 
 .reunionplaytext {
   /*background-image: url(../img/bg1.jpg); */
   font-family: 'Arvo', serif;
-  font-size: 125%;
-  width: 50%;
   padding-top: 40px;
   margin-top: 10px; 
   margin-right: auto;
@@ -308,10 +282,8 @@ h3 {
 .spncplaytext {
   background-image: url(../images/bg1.jpg); 
   font-family: 'Arvo', serif;
-  font-size: 125%;
-  width: 50%;
-  padding-top: 40px;
-  margin-top: 40px; 
+  padding: 10px;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto; 
 }
@@ -324,15 +296,18 @@ h3 {
 }
 
 #nametag {
-  width: 60%;
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/nametag.png);
   margin: auto;
+  border: 1px solid white;
 }
 
 .stagedir, .paren {
   font-style: italic;
 }
 
-#pin2 {
+#pin22 {
   width: 100%;
   height: 100%;
   background-image: url(../images/reunionpic1.jpg);
@@ -346,12 +321,67 @@ h3 {
   left: 0;
   margin-left: 10px;
   margin-bottom: 10px;
-  padding: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   background-color: rgba(255,255,255,0.6);
   border: 1px solid white;
   font-family: "Quicksand", sans-serif;
   color: black;
   z-index: 10;
+}
+
+.bamchal {
+  background-color: #333;
+  border: 8px solid white;
+  z-index: 10;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 15px 15px 15px;
+  z-index: 0
+}
+
+.bamchal p {
+  margin-top: 20px;
+}
+
+.bamchal h3 {
+  padding-bottom: 15px;
+}
+
+#books-container a {
+  color: white;
+  background-color: rgb(205,83,104);
+  border-color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#books-allcontainer {
+  background-image: url(../images/bg5.png);
+}
+
+.img-responsive {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.manpic {
+  box-shadow: 5px 5px 2px #222;
+}
+
+.rotate-left {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(7deg);
+}
+
+.rotate-right {
+  -ms-transform: rotate(-7deg); /* IE 9 */
+  -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-7deg);
 }
 
 * { box-sizing: border-box; }
@@ -389,15 +419,48 @@ body { font-family: sans-serif; }
 .grid-item img {
   display: block;
   max-width: 100%;
+  opacity: 0.35;
 }
 
 /*
  * Affix and center
  */
 
-@media screen and (min-width: 1000px) {
-/* place hover effect here for only desktop windows larger than 1000px */
+@media (hover: hover) {
+
+  .grid-item img {
+    opacity: 1
+  }
+
+  .grid-text {
+    display: none;
+  }
+
+  .grid-item:hover .grid-text {
+    display: block;
+  }
+
+  .grid-item:hover img {
+    opacity: 0.1;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; /* Safari */
+  }
+
+  #books-container a {
+    background-color: #333;
+    color: rgb(205,83,104);
+    border-color: rgb(205,83,104);
+  }
+
+  #books-container a:hover {
+    color: white;
+    background-color: rgb(205,83,104);
+    border-color: white;
+    transition: background-color 0.5s;
+  }
 }
+
+
 
 @media screen and (max-width: 999px) {
   /* Start the vertical centering */
@@ -462,6 +525,15 @@ body { font-family: sans-serif; }
   .navbar-nav {
     margin-right: 5px;
   }
+
+  .inner-cover {
+    height: 500px;
+  }
+
+  .inner-cover video {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 580px) {
