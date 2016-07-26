@@ -20,6 +20,8 @@ a:hover {
   border: 1px solid #fff;
 }
 
+/* Nav Bar */
+
 .navbar-text {
   font-family: 'Quicksand', sans-serif;
   font-size: 125%;
@@ -107,6 +109,8 @@ h3 {
   font-style: italic;
 }
 
+/* ScrollMagic Plays */
+
 #cover-logo {
   position: absolute;
   z-index: 1;
@@ -128,8 +132,6 @@ h3 {
   display: block;
   font-family: 'Arvo', sans-serif;
 }
-
-/*ScrollMagic Plays*/
 
 #opening {
   width: 100%;
@@ -236,6 +238,8 @@ h3 {
   color: blue;
 }
 
+/* Reunion */
+
 #reunionheader {
   position: fixed;
   background-image: url(../images/bg2.jpg);
@@ -271,7 +275,6 @@ h3 {
 }
 
 .reunionplaytext {
-  /*background-image: url(../img/bg1.jpg); */
   font-family: 'Arvo', serif;
   padding-top: 40px;
   margin-top: 10px; 
@@ -330,6 +333,8 @@ h3 {
   z-index: 10;
 }
 
+/* Books Page */
+
 .bamchal {
   background-color: #333;
   border: 8px solid white;
@@ -384,7 +389,48 @@ h3 {
   transform: rotate(-7deg);
 }
 
-* { box-sizing: border-box; }
+/* New Movie Ratings */
+
+#movie-theater {
+  background-image: url(../images/movie_screen_test.jpg);
+  max-width: 100%;
+  height: 100%;
+}
+
+#movie-screen {
+  width: 500px;
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+}
+
+#movie-screen-svg {
+  fill: rgb(150,150,150);
+  opacity: 1;
+  max-width: 100%
+}
+
+.number {
+  visibility: hidden;
+}
+
+#ratings1 {
+  opacity: 0;
+}
+
+#black-bars {
+  fill: black;
+  visibility: hidden;
+}
+
+/* Misc */
+
+* { 
+  box-sizing: border-box;
+}
 
 /* force scrollbar */
 html { overflow-y: scroll; }
@@ -492,15 +538,13 @@ body { font-family: sans-serif; }
   }
   .navbar-toggle {
     display: block;
+    margin-top: 15px;
   }
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
+
   .navbar-collapse.collapse {
     display: none!important;
   }
