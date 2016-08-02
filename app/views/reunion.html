@@ -84,6 +84,12 @@
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
 
+<a href="#">
+  <div id="more-button">
+    <button class="btn btn-secondary">MORE&hellip;</button>
+  </div>
+</a>
+
 <div class="container">
     <div class="reunionplaytext">
       <p><span class="stagedir">
@@ -100,7 +106,10 @@
     </div>
     <div id="trigger1"></div>
     <div id="pin1" class="reunionplaytext">
-      <div id="nametag"></div>
+      <div id="nametag">
+        <svg>
+        </svg>
+      </div>
     </div>
     <div class="reunionplaytext"> 
       <p>
@@ -322,9 +331,9 @@ Aww, I liked you better when you were knocked up.</p>
 <div class="reunionplaytext">
   <p><span class="stagedir">She flicks him off as she exits. Dan starts checking out the room.</span></p>
 </div>
-<div id="trigger22">
+<div id="r-trigger2">
 </div>
-<div id="pin22">
+<div id="reunion-pin2">
 </div>
 
 <div class="reunionplaytext">
@@ -683,7 +692,7 @@ I've missed you.</p>
 <p>MADDIE<br/>
 Me too.</p>
 </div>
-<div class="reunionplaytext">
+<div class="reunionplaytext blackout">
   <p><span class="stagedir">They exit skipping, hand in hand. Blackout.</span></p>
 </div>
 </div>
@@ -743,14 +752,14 @@ Me too.</p>
                 .addTo(controller);
 
         var wipeScene = new ScrollMagic.Scene({
-          triggerElement: "#trigger22",
+          triggerElement: "#r-trigger2",
           duration: 1000,
           offset: 300
         })
-                .setPin("#pin22")
-                .setTween("#pin22", {autoAlpha:0, rotationY: 90})
+                .setPin("#reunion-pin2")
+                .setTween("#reunion-pin2", {autoAlpha:0, rotationY: 90})
                 .addIndicators({name: "2"})
-                .addTo(controller)
+                .addTo(controller);
 
         var openScene = new ScrollMagic.Scene({
           triggerElement: "#trigger3",

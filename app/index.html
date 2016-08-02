@@ -86,6 +86,7 @@
   
   <div class="grid-item">
     <a href="#">
+    <img id="newbanner" src="images/newbanner.png">
     <img src="images/degrassi.jpg">
     <div class="grid-text">  
       <span class="grid-header-text">Degrassi Fanatics Unite</span><br /><br />
@@ -96,7 +97,8 @@
   </div>
   
   <div class="grid-item">
-    <a href="views/ratings.html">    
+    <a href="views/ratings.html">
+    <img id="newbanner" src="images/newbanner.png">        
     <img src="images/movieratings.gif">
     <div class="grid-text">  
       <span class="grid-header-text">New Movie Ratings</span><br /><br />
@@ -107,7 +109,8 @@
   </div>
   
   <div class="grid-item">
-    <a href="views/books.html">    
+    <a href="views/books.html">   
+    <img id="newbanner" src="images/newbanner.png">     
     <img src="images/bam_book.jpg">
     <div class="grid-text">  
       <span class="grid-header-text">Be a Man: How I Spent One Year Drinking, Shaving, Farming, and Fathering My Way Toward Masculinity</span><br /><br />
@@ -118,8 +121,9 @@
   </div>
   
   <div class="grid-item">
-    <a href="views/lmad.html">    
-    <img src="images/menu.jpg">
+    <a href="views/lmad.html"> 
+    <img id="newbanner" src="images/newbanner.png">       
+    <img src="images/cafe-blur.jpg">
     <div class="grid-text">  
       <span class="grid-header-text">Like Medicine After Death</span><br /><br />
       <span class="text">Our friends always give us the best advice. Especially when we never asked for it.</span></br></br>
@@ -129,7 +133,8 @@
   </div>
   
   <div class="grid-item">
-    <a href="views/spnc.html">    
+    <a href="views/spnc.html"> 
+    <img id="newbanner" src="images/newbanner.png">       
     <img src="images/parkbench.jpg">
     <div class="grid-text">  
       <span class="grid-header-text">Some People Never Change</span><br /><br />
@@ -140,7 +145,10 @@
   </div>
   
   <div class="grid-item">
-    <a href="views/reunion.html">    
+    <a href="views/reunion.html">
+    <time datetime="2008-01-01">  
+    <img id="newbanner" src="images/newbanner.png">      
+    </time>    
     <img src="images/reunion2.png">
     <div class="grid-text">  
       <span class="grid-header-text">Reunion</span><br /><br />
@@ -169,6 +177,10 @@ var $grid = $('.grid').masonry({
 $grid.imagesLoaded().progress( function() {
   $grid.masonry();
 });
+
+// new banner for recently published content
+var pubDate = $(".grid-item")
+
 
   </script>
   </body>

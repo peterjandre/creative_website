@@ -109,6 +109,12 @@ h3 {
   font-style: italic;
 }
 
+#newbanner {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* ScrollMagic Plays */
 
 #cover-logo {
@@ -276,43 +282,34 @@ h3 {
 
 .reunionplaytext {
   font-family: 'Arvo', serif;
+  font-size: 1.2em;
   padding-top: 40px;
   margin-top: 10px; 
   margin-right: auto;
   margin-left: auto; 
 }
 
-.spncplaytext {
-  background-image: url(../images/bg1.jpg); 
-  font-family: 'Arvo', serif;
-  padding: 10px;
-  margin-top: 40px;
-  margin-right: auto;
-  margin-left: auto; 
-}
-
-#spncsplash {
-  background-image: url(../images/parkbench.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
 #nametag {
-  width: 300px;
-  height: 300px;
-  background-image: url(../images/nametag.png);
-  margin: auto;
-  border: 1px solid white;
+  width: 400px;
+  height: 268px;
+  background-image: url(../images/name-tag.jpg);
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stagedir, .paren {
   font-style: italic;
 }
 
-#pin22 {
+.stagedir {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#reunion-pin2 {
   width: 100%;
-  height: 100%;
+  height: 800px;
   background-image: url(../images/reunionpic1.jpg);
   background-size: cover;
 }
@@ -320,10 +317,8 @@ h3 {
 #backtotop {
   position: fixed;
   visibility: hidden;
-  bottom: 0;
-  left: 0;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  bottom: 50px;
+  left: 10px;
   padding-left: 5px;
   padding-right: 5px;
   background-color: rgba(255,255,255,0.6);
@@ -331,6 +326,160 @@ h3 {
   font-family: "Quicksand", sans-serif;
   color: black;
   z-index: 10;
+}
+
+#more-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 11;
+}
+
+/* Some People Never Change */
+
+.spncplaytext {
+  font-family: 'Arvo', serif;
+  font-size: 1.2em;
+  padding: 10px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+.spncsplash {
+  background-image: url(../images/parkbench.jpg);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#spnc-title {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  font-size: 2em;
+}
+
+.flashy {
+  position: absolute;
+  opacity: 0;
+  background-image: url(../images/flash.png);
+  width: 3px;
+  height: 3px;
+}
+
+#flash1 {
+  left: 400px;
+  top: 200px;
+}
+
+/* Like Medicine After Death*/
+
+.lmad-body {
+  background-color: #ccc;
+  color: black;
+  font-family: 'Arvo', sans-serif;
+  font-size: 1.2em;
+  padding-top: 80px;
+}
+
+.lmad-body p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+#lmad-splash {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/cafe-blur.jpg);
+  background-size: cover;
+  color: black;
+  z-index: 10;
+}
+
+#lmad-title {
+  position: absolute;
+  font-size: 2em;
+  font-family: 'Quicksand', sans-serif;
+  top: 300px;
+  left: 100px;
+}
+
+.male-table {
+  width: 80%;
+  margin-right: 20%;
+}
+
+.female-table {
+  width: 80%;
+  margin-left: 20%;
+}
+
+.table {
+  position: fixed;
+  background-image: url(../images/cafetable.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+}
+
+#male-table-pic {
+  bottom: 150px;
+  left: 200px;
+}
+
+#female-table-pic {
+  bottom: 150px;
+  right: 200px;
+}
+
+.piece {
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  opacity: 0.2;  
+}
+
+.male-piece {
+  background-image: url(../images/male-piece.png);
+  bottom: 280px;
+}
+
+.female-piece {
+  background-image: url(../images/female-piece.png);
+  bottom: 280px;
+}
+
+#preston {
+  left: 120px;
+}
+
+#ryan {
+  left: 360px;
+}
+
+#lisa {
+  right: 380px;
+}
+
+#cathee {
+  right: 140px;
+}
+
+#waitress {
+  background-image: url(../images/waitress-piece.png);
+  bottom: 400px;
+  right: 220px;
+}
+
+.blackout {
+  margin-bottom: 200px;
 }
 
 /* Books Page */
@@ -391,10 +540,35 @@ h3 {
 
 /* New Movie Ratings */
 
-#movie-theater {
-  background-image: url(../images/movie_screen_test.jpg);
-  max-width: 100%;
+#ratings-container {
+  width: 100%;
   height: 100%;
+  background-color: black;
+}
+
+#movie-theater-top {
+  position: absolute;
+  background-image: url(../images/movie_screen_top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 793px;
+  height: 348px;
+  top: 100px;
+  left: 50%;
+  margin-left: -396.5px;
+  z-index: 1;
+}
+
+#movie-theater-bottom {
+  position: absolute;
+  background-image: url(../images/movie_screen_bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 793px;
+  height: 132px;
+  top: 445px;
+  left: 50%;
+  margin-left: -396.5px;
 }
 
 #movie-screen {
@@ -402,9 +576,11 @@ h3 {
   max-width: 100%;
   height: 300px;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
   background-color: black;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  top: 170px;
 }
 
 #movie-screen-svg {
@@ -417,12 +593,31 @@ h3 {
   visibility: hidden;
 }
 
-#ratings1 {
+.ratings {
   opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  z-index: 2
 }
 
 #black-bars {
   fill: black;
+  visibility: hidden;
+}
+
+.ratings-nav {
+  position: absolute;
+  top: 600px;
+  width: 110px;
+  visibility: hidden;
+  margin-bottom: 30px;
+  left: 50%;
+  margin-left: -55px;
+}
+
+#left-button {
   visibility: hidden;
 }
 
