@@ -33,6 +33,12 @@ a:hover {
   float: none;
 }
 
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  margin-left: -218px;
+}
+
 .media-right, .navbar-header {
   opacity: 0.75;
   filter: alpha(opacity=75);
@@ -109,10 +115,11 @@ h3 {
   font-style: italic;
 }
 
-#newbanner {
+.newbanner {
   position: absolute;
   max-width: 100%;
   max-height: 100%;
+  visibility: hidden;
 }
 
 /* ScrollMagic Plays */
@@ -256,7 +263,7 @@ h3 {
 }
 
 .reunionsplash {
-  background-image: url(../images/reunionsplash.jpg);
+  background-image: url(../images/reunion_splash.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -266,18 +273,18 @@ h3 {
   display: none;
 }
 
-#pin4 {
-  visibility: hidden;
-  background-image: url(../images/reunionsplash2.jpg);
-}
-
 #reuniontitle {
   position: absolute;
   font-family: 'Quicksand', sans-serif;
-  margin-left: 100px;
-  margin-top: 300px;
+  left: 100px;
+  top: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
   z-index: 1;
-  color: white;
+  color: yellow;
+  background-color: #222;
+  box-shadow: 2px 2px 2px black;
 }
 
 .reunionplaytext {
@@ -291,11 +298,19 @@ h3 {
 
 #nametag {
   width: 400px;
+  max-width: 100%;
   height: 268px;
   background-image: url(../images/name-tag.jpg);
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 3px 3px 3px black;
+}
+
+#nametag-name {
+  position: relative;
+  top: 110px;
+  opacity: 1;
 }
 
 .stagedir, .paren {
@@ -310,7 +325,7 @@ h3 {
 #reunion-pin2 {
   width: 100%;
   height: 800px;
-  background-image: url(../images/reunionpic1.jpg);
+  background-image: url(../images/reunion_midsplash.jpg);
   background-size: cover;
 }
 
@@ -335,6 +350,32 @@ h3 {
   z-index: 11;
 }
 
+.graffiti {
+  position: absolute;
+}
+
+#dweebs {
+  left: 100px;
+  top: 100px;
+}
+
+#assholes {
+  right: 200px;
+  top: 250px;
+}
+
+#freaks {
+  top: 500px;
+  left: 300px;
+}
+
+#losers {
+  top: 150px;
+  left: 50%;
+  margin-left: -358px;
+  transform: scale(1.5);
+}
+
 /* Some People Never Change */
 
 .spncplaytext {
@@ -353,11 +394,21 @@ h3 {
   height: 100%;
 }
 
+#white-screen {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+}
+
 #spnc-title {
   position: absolute;
   top: 300px;
   left: 100px;
   font-size: 2em;
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 2px 2px 2px black;
 }
 
 .flashy {
@@ -368,9 +419,9 @@ h3 {
   height: 3px;
 }
 
-#flash1 {
-  left: 400px;
-  top: 200px;
+.flash {
+  position: absolute;
+  left: 50%;
 }
 
 /* Like Medicine After Death*/
@@ -405,6 +456,9 @@ h3 {
   font-family: 'Quicksand', sans-serif;
   top: 300px;
   left: 100px;
+  padding: 20px;
+  background-color: #cc9900;
+  box-shadow: 2px 2px 2px #333;
 }
 
 .male-table {
@@ -476,6 +530,10 @@ h3 {
   background-image: url(../images/waitress-piece.png);
   bottom: 400px;
   right: 220px;
+}
+
+.break {
+  margin-bottom: 75px;
 }
 
 .blackout {
@@ -730,6 +788,12 @@ body { font-family: sans-serif; }
   }
   .navbar-left,.navbar-right {
     float: none !important;
+  }
+
+  .navbar-center {
+    position: static;
+    left: 0;
+    margin-left: 0;
   }
   .navbar-toggle {
     display: block;

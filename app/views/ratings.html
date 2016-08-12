@@ -57,6 +57,24 @@
 
       </div>
     </nav>
+
+<div class="modal fade" id="playModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">New Movie Ratings</h4>
+      </div>
+      <div class="modal-body">
+        <p>The MPAA has This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.</p>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="ratings-container">
 
 <div id="movie-theater-top"></div>
@@ -74,9 +92,14 @@
     <text id="three" class="number" x=195 y=215 font-size="200">3</text>
     <text id="two" class="number" x=195 y=215 font-size="200">2</text>
     <rect id="black-bars" width="500" height="300" />
-    <image id="ratings1" class="ratings" xlink:href="../images/movieratings.gif" width="500px" height="300px" x="0" y="0" />
-    <image id="ratings2" class="ratings" xlink:href="../images/redband.jpg" width="500px" height="300px" x="0" y="0" />
-    <image id="ratings3" class="ratings" xlink:href="../images/pg13-rating.jpg" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings1" class="ratings" xlink:href="../images/ratings01.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings2" class="ratings" xlink:href="../images/ratings02.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings3" class="ratings" xlink:href="../images/ratings04.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings4" class="ratings" xlink:href="../images/ratings03.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings5" class="ratings" xlink:href="../images/ratings06.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings6" class="ratings" xlink:href="../images/ratings05.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings7" class="ratings" xlink:href="../images/ratings08.png" width="500px" height="300px" x="0" y="0" />
+    <image id="ratings8" class="ratings" xlink:href="../images/ratings07.png" width="500px" height="300px" x="0" y="0" />                    
   </svg>
 </div>
 <div id="movie-theater-bottom"></div>
@@ -105,6 +128,8 @@
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>      
   <script type="text/javascript">
   $(function () { // wait for document ready
+    
+    $("#playModal").modal("show");
     // init
     var $screenSVG = ("#movie-screen-svg")
     var $allSVG = ("#all-svg")
