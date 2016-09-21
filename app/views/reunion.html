@@ -141,13 +141,12 @@
 </div>
 
 <a href="#"><div id="backtotop">
-  TOP<br />
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
 
 <a href="#">
   <div id="more-button">
-    <button class="btn btn-secondary">MORE&hellip;</button>
+    MORE&hellip;
   </div>
 </a>
 
@@ -820,11 +819,18 @@ Me too.</p>
       return false;
     });
 
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    var scene2 = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+        })
+                .setTween("#backtotop", {autoAlpha:1})
+                .addTo(controller);
+
     if (!Modernizr.touchevents) {
       
       $("#spotify").css("display", "block")    
-      // init controller
-      var controller = new ScrollMagic.Controller();
       
       // build scene
         var scene = new ScrollMagic.Scene({
@@ -846,12 +852,6 @@ Me too.</p>
           offset: 150
         })
                 .setTween(nameTween)
-                .addTo(controller);
-
-        var scene2 = new ScrollMagic.Scene({
-          triggerElement: "#trigger1",
-        })
-                .setTween("#backtotop", {autoAlpha:1})
                 .addTo(controller);
 
         var wipeScene = new ScrollMagic.Scene({

@@ -81,9 +81,14 @@
 </div>
 
 <a href="#"><div id="backtotop">
-  TOP<br />
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
+
+<a href="#">
+  <div id="more-button">
+    MORE&hellip;
+  </div>
+</a>
 
 <div class="container">
 <img class="flash" src="../images/flash.png">
@@ -351,11 +356,12 @@
       .to($vanish, 5.5, {opacity: 1}, "-=4")
       .to($title, 5.5, {backgroundColor: "white", boxShadow: "0px 0px 0px white"}, "-=5.5")
 
+// init controller
+      var controller = new ScrollMagic.Controller();
+      
     // pinned cover image and back-to-top button for non-touch devices only
     if (!Modernizr.touchevents) {
         
-      // init controller
-      var controller = new ScrollMagic.Controller();
       
       // build scene for pinned cover page
         var scene = new ScrollMagic.Scene({
