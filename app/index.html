@@ -158,8 +158,8 @@
 <!--     </a> -->
   </div>
 
-  <div class="grid-item" data-date="2014-09-12T00:00:00Z">
-<!--     <a href="#"> -->
+<!--   <div class="grid-item" data-date="2014-09-12T00:00:00Z">
+    <a href="#">
     <img class="newbanner" src="images/newbanner.png">
     <img src="images/whiteraspberry.jpg">
     <div class="grid-text">  
@@ -167,9 +167,13 @@
       <span class="text">A one-of-a-kind online collaboration with funk artist White Raspberry.</span></br></br>
       <span class="text-desc">Web Only Feature</span>      
     </div>     
-<!--     </a> -->
-  </div>  
+    </a>
+  </div>  --> 
 
+</div>
+
+<div id="footer">
+  Copyright Me. Contact me.
 </div>
 
       </div>
@@ -178,39 +182,7 @@
     <script src="../bower_components/masonry/dist/masonry.pkgd.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js" ></script>
     <script src="../bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script type="text/javascript">
-// init Masonry
-var $grid = $('.grid').masonry({
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});
-
-// new banner for recently published content
-var items = $(".grid-item")
-
-for (var i = 0; i <= items.length - 1; i++) {
-  var item = items[i];
-  var banner = $(item).find(".newbanner");
-
-  var date = $(item).data("date");
-  var pubDate = new Date(date);
-  var nowDate = new Date();
-  var msDay = 1000*60*60*24;
-  var pubDay = pubDate / msDay;
-  var nowDay = nowDate / msDay;
-
-  if (nowDay - pubDay < 31) {
-    $(banner).css("visibility", "visible")
-  }
-};
-
-
-  </script>
+    <script src="scripts/index.js"></script>
   </body>
 
 </html>
