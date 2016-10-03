@@ -14,7 +14,7 @@ var items = $(".grid-item")
 
 for (var i = 0; i <= items.length - 1; i++) {
   var item = items[i];
-  var banner = $(item).find(".newbanner");
+  var banner = $(item).find("#newbanner");
 
   var date = $(item).data("date");
   var pubDate = new Date(date);

@@ -1,6 +1,5 @@
 $(function () { // wait for document ready
     
-    $("#playModal").modal("show");
     // init
     var $screenSVG = ("#movie-screen-svg")
     var $allSVG = ("#all-svg")
@@ -16,7 +15,7 @@ $(function () { // wait for document ready
     var $ratings3 = ("#ratings3")
     var $ratings = (".ratings")
     var $bars = ("#black-bars")
-    var $ratingsNav = (".ratings-nav")
+    var $ratingsNav = ("#nav-container")
 
     var tl = new TimelineMax()
 

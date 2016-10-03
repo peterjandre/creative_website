@@ -42,10 +42,10 @@
         </div>        
         <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="navbar-text"><a href="#">FEATURES</a></li>
+            <li class="navbar-text"><a href="features.html">FEATURES</a></li>
             <li class="navbar-text"><a href="plays.html">PLAYS</a></li>
             <li class="navbar-text"><a href="books.html">BOOKS</a></li>
-            <li class="navbar-text"><a href="#">VIDEOS</a></li>
+            <li class="navbar-text"><a href="videos.html">VIDEOS</a></li>
           </ul>       
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://twitter.com/PeterJAndre" target="_blank"><span class="media-right"><img src="../images/twitter_outline.png" alt="Twitter"></span></a></li>
@@ -57,20 +57,25 @@
       </div>
     </nav>
 
-<div class="modal fade" id="playModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title">This play is FREE to read, FREE to perform.</h4>
+<div class="modal2">
+  <div class="modal-content2">
+    <h3>This play is <b>FREE</b> to read, <b>FREE</b> to perform.</h3>
+    <p>
+      The short plays on this website are licensed under a <a class="link-typical"rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may read it for fun, produce it commercially, or adapt it for your own purposes. If you do produce it, please credit me and contact me so I know it's being produced somewhere - that way I can promote your show too!
+    </p>
+    <div class="btn modal-btn" id="ph">PRODUCTION HISTORY</div>
+    <a href="../pdfs/Reunion.pdf" download><div class="btn modal-btn">DOWNLOAD PDF</div></a>
+      <div id="closebox">
+        <svg viewBox="0 0 100 100">
+          <path class="close-x" d="M 10,10 L 100,100 M 100,10 L 10,100" />
+        </svg>
       </div>
-      <div class="modal-body">
-        <p>The short plays on this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may read it for fun, produce it commercially, or adapt it for your own purposes. If you do produce it, please credit me and contact me so I know it's being produced somewhere &mdash; that way I can promote your show too!</p>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+  </div>
+</div>
+
+<div class="modal3">
+  <div class="modal-content3">
+    First produced by Blowout Theatre at Actors Theatre Workshop, New York, NY, May 2011.
   </div>
 </div>
 
@@ -144,11 +149,9 @@
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
 
-<a href="#">
   <div id="more-button">
     MORE&hellip;
   </div>
-</a>
 
 <div class="container">
     <div class="reunionplaytext">
@@ -464,7 +467,7 @@ I suppose. Nobody who's here ever really left high school. It's still the popula
 And what about your shitty life?</p>
 <p>DAN<br/>
 Are you kidding me? I'm Brad Bru-bah-coor. I'm sitting pretty.</p>
-<p>Beat.</p>
+<p><span class="stagedir">Beat.</span></p>
 <p>DAN <span class="stagedir">(CONT’D)</span><br/>
 You wanna know a secret?</p>
 <p>LINDA<br/>
@@ -472,7 +475,7 @@ Sure.</p>
 <p>DAN<br/>
 I'm not actually Brad. I didn't even go to this stupid school. I'm here with a friend and, get this, she's trying to get back at this guy she slept with like six months ago, they both went to this school and&mdash;</p>
 <p>LINDA<br/>
-(hurt)<br/>
+<span class="stagedir">(hurt)</span><br/>
 You fucking asshole.</p>
 <p>DAN<br/>
 Sorry?</p>
@@ -798,6 +801,7 @@ Me too.</p>
   <script src="../../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
   <script src="../../bower_components/js-cookie/src/js.cookie.js"></script>    
   <script src="../scripts/reunion.js"></script>
+  <script src="../scripts/more.js"></script>
   </body>
 
 </html>

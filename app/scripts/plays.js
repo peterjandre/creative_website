@@ -32,7 +32,7 @@ $(function () { // wait for document ready
     var aniScene3 = new ScrollMagic.Scene({
         triggerHook: 0,
         triggerElement: '#spnc',
-        offset: -200,
+        offset: -100,
         duration: 100
       })
       .setTween(hideAni3)

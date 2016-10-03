@@ -1,15 +1,5 @@
 $(function () { // wait for document ready
 
-    var modalCookie = Cookies.get("readModal")
-
-    if (modalCookie == "yes") {
-      console.log("cookie is on system")
-    } else {
-      Cookies.set('readModal', 'yes', {expires: 7});
-      $('#playModal').modal("show");
-      console.log("cookie has been set, modal is shown")
-    };
-
     $('#backtotop').click(function(){
       $("html, body").animate({ scrollTop: 0 }, 'slow');
       return false;
@@ -51,7 +41,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween01)
-            .addIndicators()
             .addTo(controller);
 
     var tween02 = new TimelineMax();
@@ -65,7 +54,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween02)
-            .addIndicators()
             .addTo(controller);
 
     var tween03 = new TimelineMax();
@@ -80,7 +68,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween03)
-            .addIndicators()
             .addTo(controller);
 
     var tween04 = new TimelineMax();
@@ -98,7 +85,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween04)
-            .addIndicators()
             .addTo(controller);    
 
     var tween05 = new TimelineMax();
@@ -113,7 +99,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween05)
-            .addIndicators()
             .addTo(controller);                           
 
     var tween06 = new TimelineMax();
@@ -129,7 +114,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween06)
-            .addIndicators()
             .addTo(controller);   
 
     var tween07 = TweenLite.fromTo($waitress, 1.5, {right: width, top: -300, autoAlpha:0.2}, {right: width+width/2-pieceWidth, top: height/2.5, autoAlpha: 0.3, immediateRender: false})
@@ -139,7 +123,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween07)
-            .addIndicators()
             .addTo(controller); 
 
     var tween08 = new TimelineMax();
@@ -157,7 +140,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween08)
-            .addIndicators()
             .addTo(controller);
 
     var tween09 = new TimelineMax();
@@ -176,7 +158,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween09)
-            .addIndicators()
             .addTo(controller);      
 
     var tween10 = new TimelineMax();
@@ -191,7 +172,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween10)
-            .addIndicators()
             .addTo(controller);      
 
     var tween11 = new TimelineMax();
@@ -204,7 +184,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween11)
-            .addIndicators()
             .addTo(controller);  
 
     var tween12 = new TimelineMax();
@@ -219,7 +198,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween12)
-            .addIndicators()
             .addTo(controller);
 
     var tween13 = new TimelineMax();
@@ -232,7 +210,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween13)
-            .addIndicators()
             .addTo(controller);
 
     var tween14 = new TimelineMax();
@@ -245,7 +222,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween14)
-            .addIndicators()
             .addTo(controller);  
 
     var tween15 = new TimelineMax();
@@ -259,7 +235,6 @@ $(function () { // wait for document ready
     })
 
             .setTween(tween15)
-            .addIndicators()
             .addTo(controller);                                                                                                    
 
   });

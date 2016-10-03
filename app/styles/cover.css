@@ -53,6 +53,15 @@ a:hover {
   height: 50px;
 }
 
+.navbar-active {
+  background-color: #444;
+  border: 1px solid #ccc;
+}
+
+.navbar-active a {
+  color: white !important;
+}
+
 /*
  * Base structure
  */
@@ -115,11 +124,15 @@ h3 {
   font-style: italic;
 }
 
-.newbanner {
+.banner {
   position: absolute;
   max-width: 100%;
   max-height: 100%;
   visibility: hidden;
+}
+
+#comingsoon {
+  visibility: visible;
 }
 
 #footer {
@@ -129,7 +142,39 @@ h3 {
   padding: 10px;
 }
 
-/* ScrollMagic Plays */
+.cover-container {
+  max-height: 600px;
+/*  width: 90%;*/
+  margin: auto;
+}
+
+#covervid {
+  position: relative;
+  z-index: 0;
+}
+
+/* Videos */
+
+#videos-opening {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/color_bars.png);
+  background-size: contain;
+  max-height: 100%;
+}
+
+#videos-title {
+  margin-top: 200px;
+}
+
+/* Features */
+
+#features-opening {
+  background-image: url(../images/feature_bg.jpg);
+  background-repeat: repeat;
+}
+
+/* Plays */
 
 #cover-logo {
   position: absolute;
@@ -153,18 +198,20 @@ h3 {
   font-family: 'Arvo', sans-serif;
 }
 
-#opening {
+.opening {
   width: 100%;
-  height: 100%;
+  height: 200px;
   overflow: hidden;
+}
+
+#plays-opening {
   background-image: url(../images/playcurtain.png);
   background-size: cover;
 }
 
 #playsheader {
-  position: absolute;
-  margin-top: 275px;
-  margin-left: 15%;
+  position: relative;
+  top: 100px;
 }
 
 .playheader {
@@ -258,17 +305,20 @@ a:-webkit-any-link {
   background-image: url(../images/parkbench.jpg);
 }
 
+#seventh {
+  background-image: url(../images/ms-for-feature.jpg);
+}
+
+#eighth {
+  background-image: url(../images/mpaa.png);
+}
+
 .playimg {
   position: absolute;
   width: 100%;
   height: 800px;
   background-size: cover;
   background-position: center center;
-}
-
-#covervid {
-  position: relative;
-  z-index: 0;
 }
 
 #mobile-desc {
@@ -284,6 +334,80 @@ a:-webkit-any-link {
 
 .modal-body a {
   color: blue;
+}
+
+.modal2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  margin-top: 50px;
+  padding: 20px;
+  z-index: 100;
+  display: none;
+}
+
+.modal3 {
+  position: fixed;
+  margin-top: 70px;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  background-color: #eee;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  z-index: 101;
+  display: none;
+  cursor: pointer;
+}
+
+.modal-btn {
+  border: 2px solid white;
+  border-radius: 5%;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  width: 190px;
+  text-align: center;
+}
+
+.modal-btn:hover,
+.modal-btn:active {
+  color: white !important;
+  background-color: #222 !important;
+}
+
+.modal-btn:active {
+  background-color: white;
+  color: black;
+}
+
+#closebox {
+  position: absolute;
+  right: 3%;
+  top: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.modal-content2 {
+  width: 70%;
+  margin: auto;
+}
+
+.close-x {
+  stroke: white;
+  stroke-width: 1;
+}
+
+.link-typical {
+  color: blue;
+}
+
+.link-typical:hover {
+  color: blue;
+  text-decoration: underline;
 }
 
 /* Reunion */
@@ -379,12 +503,12 @@ a:-webkit-any-link {
   color: black;
   z-index: 10;
   box-shadow: 2px 2px 2px black;
+  font-size: 1.2em;
 }
 
 #more-button {
   position: fixed;
   font-family: "Quicksand", sans-serif;
-  font-weight: bold;
   bottom: 10px;
   left: 10px;
   z-index: 11;
@@ -395,6 +519,8 @@ a:-webkit-any-link {
   color: black;
   z-index: 10;
   box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
 .graffiti {
@@ -485,6 +611,10 @@ svg {
   font-family: 'Arvo', sans-serif;
   font-size: 1.2em;
   padding-top: 80px;
+}
+
+.lmad {
+  background-color: #aaa;
 }
 
 .lmad-body p {
@@ -637,41 +767,33 @@ svg {
   background-color: black;
 }
 
-#movie-theater-top {
+#movie-theater {
   position: absolute;
-  background-image: url(../images/movie_screen_top.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 793px;
-  height: 348px;
-  top: 100px;
+  width: 95%;
+  max-width: 910px;
+  top: 52.5%;
   left: 50%;
-  margin-left: -396.5px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
-#movie-theater-bottom {
-  position: absolute;
-  background-image: url(../images/movie_screen_bottom.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 793px;
-  height: 132px;
-  top: 445px;
-  left: 50%;
-  margin-left: -396.5px;
-}
-
 #movie-screen {
-  width: 500px;
-  max-width: 100%;
-  height: 300px;
+  width: 70%;
+  max-width: 600px;
   overflow: hidden;
   background-color: black;
   position: absolute;
+  top: 50%;
   left: 50%;
-  margin-left: -250px;
-  top: 170px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #movie-screen-svg {
@@ -699,17 +821,34 @@ svg {
 }
 
 .ratings-nav {
-  position: absolute;
-  top: 600px;
-  width: 110px;
-  visibility: hidden;
-  margin-bottom: 30px;
-  left: 50%;
-  margin-left: -55px;
+  position: relative;
+  top: 50%;
+  margin-top: -10px;
 }
 
 #left-button {
+  float: left;
   visibility: hidden;
+}
+
+#right-button {
+  float: right;
+}
+
+#nav-container {
+  position: absolute;
+  visibility: hidden;
+  width: 95%;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 1000px;
+  z-index: 3;
 }
 
 /* Misc */
@@ -745,6 +884,7 @@ body { font-family: sans-serif; }
 
 .grid-item {
   float: left;
+  overflow: hidden;
 /*  border: 1px solid #fff;*/
 }
 
@@ -790,6 +930,7 @@ body { font-family: sans-serif; }
     border-color: white;
     transition: background-color 0.5s;
   }
+
 }
 
 
@@ -855,6 +996,10 @@ body { font-family: sans-serif; }
     display:block !important;
   }
 
+  #closebox {
+    width: 50px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -881,4 +1026,20 @@ body { font-family: sans-serif; }
   .navbar-brand {
     width: 80%;
   }
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
 }

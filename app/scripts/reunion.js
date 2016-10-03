@@ -36,7 +36,6 @@ $(function () { // wait for document ready
           offset: 150
         })          
                 .setPin("#pin1")
-                .addIndicators({name: "1 (duration: 400)"})
                 .addTo(controller);
 
         $("#nametag-name").css("opacity", "0")
@@ -57,7 +56,6 @@ $(function () { // wait for document ready
           offset: 300
         })
                 .setPin("#reunion-pin2")
-                .addIndicators({name: "2"})
                 .addTo(controller);
 
         var openScene = new ScrollMagic.Scene({
@@ -66,7 +64,6 @@ $(function () { // wait for document ready
           offset: 350
         })
                 .setPin("#pin3")
-                .addIndicators({name: "open"})
                 .addTo(controller)
 
         var $d1 = $("#dweebs_1")
@@ -108,7 +105,6 @@ $(function () { // wait for document ready
           offset: 400
         })
                 .setTween(dTween)
-                .addIndicators({name: "dweebs"})
                 .addTo(controller)
 
         var $a1 = $("#assholes_1")
@@ -148,7 +144,6 @@ $(function () { // wait for document ready
           offset: 875
         })
                 .setTween(aTween)
-                .addIndicators({name: "assholes"})
                 .addTo(controller)
 
         var $f1 = $("#freaks_1")
@@ -188,7 +183,6 @@ $(function () { // wait for document ready
           offset: 1350
         })
                 .setTween(fTween)
-                .addIndicators({name: "freaks"})
                 .addTo(controller)
 
         var $l1 = $("#losers_1")
@@ -248,7 +242,6 @@ $(function () { // wait for document ready
           offset: 100
         })
                 .setTween(lTween)
-                .addIndicators({name: "losers"})
                 .addTo(controller)
 
     }
