@@ -1,13 +1,62 @@
 /*
- * Globals
+ * Base structure
  */
 
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  font-family: 'Arvo', serif;
+  font-size: 62.5%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.4em;
+  z-index: 10;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8em;
+  z-index: 10;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+/* Globals */
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
 
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }
 
 /* Custom default button */
@@ -20,12 +69,23 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.text,
+.text-desc {
+  font-family: 'Arvo', serif;
+}
+
+.text-desc {
+  font-style: italic;
+}
+
 /* Nav Bar */
 
 .navbar-text {
   font-family: 'Quicksand', sans-serif;
-  font-size: 125%;
+  font-size: 2.4em;
   margin: 5px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .navbar .navbar-nav {
@@ -36,7 +96,7 @@ a:hover {
 .navbar-center {
   position: absolute;
   left: 50%;
-  margin-left: -218px;
+  margin-left: -199px;
 }
 
 .media-right, .navbar-header {
@@ -62,41 +122,13 @@ a:hover {
   color: white !important;
 }
 
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-  background-color: #333;
-}
-body {
-  color: #fff;
-  font-family: 'Arvo', serif;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+#ntpa-header {
+  position: absolute;
+  left: 2px;
+  top: -2px;
 }
 
-h1 {
-  font-family: 'Quicksand', sans-serif;
-  z-index: 10;
-}
-
-h3 {
-  font-family: 'Quicksand', sans-serif;
-  z-index: 10;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
+/* Home Page */
 
 .inner-cover {
   background-image: url(../images/bg1.jpg);
@@ -105,23 +137,17 @@ h3 {
 .grid-text {
   position: absolute;
   z-index: 10;
+  font-size: 2.4em;
   top: 10%;
   left: 2%;
   right: 2%;
   display: block;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);  
 }
 
 .grid-header-text {
   font-family: 'Quicksand', sans-serif;
-}
-
-.text,
-.text-desc {
-  font-family: 'Arvo', serif;
-}
-
-.text-desc {
-  font-style: italic;
+  font-size: 1.4em;
 }
 
 .banner {
@@ -140,6 +166,8 @@ h3 {
   border-top: 1px solid #555;
   background-color: black;
   padding: 10px;
+  font-size: 2.4em;
+  font-family: "Quicksand", sans-serif;
 }
 
 .cover-container {
@@ -153,29 +181,6 @@ h3 {
   z-index: 0;
 }
 
-/* Videos */
-
-#videos-opening {
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/color_bars.png);
-  background-size: contain;
-  max-height: 100%;
-}
-
-#videos-title {
-  margin-top: 200px;
-}
-
-/* Features */
-
-#features-opening {
-  background-image: url(../images/feature_bg.jpg);
-  background-repeat: repeat;
-}
-
-/* Plays */
-
 #cover-logo {
   position: absolute;
   z-index: 1;
@@ -183,19 +188,25 @@ h3 {
   left: 5%;
 }
 
-#cover-play {
-  position: absolute;
-  z-index: 1;
-  top: 20%;
-  left: 48%;
-  display: block;
-  font-family: 'Arvo', sans-serif;
-  font-size: 250%;
-}
-
 #cover-text {
   display: block;
   font-family: 'Arvo', sans-serif;
+  font-size: 3.6em;
+}
+
+#mobile-desc {
+  display: none;
+  font-family: 'Arvo', sans-serif;
+  margin: 5px;
+}
+
+/* Sections */
+
+#section-header {
+  position: relative;
+  font-size: 4.8em;
+  font-family: "Quicksand", sans-serif;
+  top: 50%;
 }
 
 .opening {
@@ -204,26 +215,21 @@ h3 {
   overflow: hidden;
 }
 
-#plays-opening {
-  background-image: url(../images/playcurtain.png);
-  background-size: cover;
+.panel {
+  height: 100%;
+  max-width: 100%;
+  margin-bottom: 200px;
+  background-color: transparent;
 }
 
-#playsheader {
+.panel-header {
   position: relative;
-  top: 100px;
-}
-
-.playheader {
-  position: relative;
+  font-size: 3.6em;
   text-align: left;
   width: 50%;
   top: 75px;
   left: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 10px 5px 10px 5px;
   z-index: 1;
   color: white;
   background-color: #222;
@@ -232,16 +238,14 @@ h3 {
   transition: 1s ease;
 }
 
-a:-webkit-any-link {
-  text-decoration: none;
-}
-
-.playheader:hover {
+.panel-header:hover {
   color: yellow;
 }
 
-.playdesc {
+.panel-desc {
   position: relative;
+  font-size: 2.4em;
+  font-family: 'Arvo', sans-serif;
   text-align: left;
   background-color: #222;
   box-shadow: 2px 2px 2px black;
@@ -252,8 +256,53 @@ a:-webkit-any-link {
   left: 50px;
 }
 
+.panel-img {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Videos */
+
+#videos-opening {
+  background-image: url(../images/color_bars.png);
+  background-size: contain;
+  overflow: hidden;
+}
+
+#videos-title {
+  margin-top: 200px;
+  font-size: 4.8em;
+}
+
+/* Features */
+
+#features-opening {
+  background-image: url(../images/feature_bg.jpg);
+  background-repeat: repeat;
+}
+
+#seventh {
+  background-image: url(../images/ms-for-feature.jpg);
+}
+
+#eighth {
+  background-image: url(../images/mpaa.png);
+}
+
+/* Plays */
+
+#plays-opening {
+  background-image: url(../images/playcurtain.png);
+  background-size: cover;
+}
+
 .playppl {
   position: relative;
+  font-size: 2.0em;
+  font-family: "Arvo", serif;
   text-align: left;
   background-color: #222;
   box-shadow: 2px 2px 2px black;
@@ -262,23 +311,6 @@ a:-webkit-any-link {
   width: 30%;
   top: 175px;
   left: 50px;
-}
-
-.readplay {
-  position: relative;
-  top: 350px;
-}
-
-.panel {
-  height: 100%;
-  max-width: 100%;
-  margin-bottom: 200px;
-  background-color: transparent;
-}
-
-#pinned {
-    width: 400px;
-    height: 400px;
 }
 
 #first {
@@ -305,43 +337,27 @@ a:-webkit-any-link {
   background-image: url(../images/parkbench.jpg);
 }
 
-#seventh {
-  background-image: url(../images/ms-for-feature.jpg);
-}
+/* Plays - Global */
 
-#eighth {
-  background-image: url(../images/mpaa.png);
-}
-
-.playimg {
+.play-title {
   position: absolute;
-  width: 100%;
-  height: 800px;
-  background-size: cover;
-  background-position: center center;
+  font-size: 4.2em;
+  font-family: 'Quicksand', sans-serif;
+  top: 33%;
+  left: 8%;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 2px 2px 2px black;
 }
 
-#mobile-desc {
-  display: none;
-  font-family: 'Arvo', sans-serif;
-  margin: 5px;
-}
-
-#playModal {
-  color: black;
-  text-shadow: none;
-}
-
-.modal-body a {
-  color: blue;
-}
+/* Plays Modal */
 
 .modal2 {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  font-size: 2.4em;
   background-color: rgba(0,0,0,0.9);
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 20px;
   z-index: 100;
   display: none;
@@ -349,6 +365,7 @@ a:-webkit-any-link {
 
 .modal3 {
   position: fixed;
+  font-size: 2.4em;
   margin-top: 70px;
   width: 60%;
   left: 50%;
@@ -412,44 +429,23 @@ a:-webkit-any-link {
 
 /* Reunion */
 
-#reunionheader {
-  position: fixed;
-  background-image: url(../images/bg2.jpg);
-  padding-top: 10px;
-  margin-top: 25px;
-  left: 0;
-  z-index: 1;
-}
-
 .reunionsplash {
   background-image: url(../images/reunion_splash.jpg);
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 #spotify {
   display: none;
 }
 
-#reuniontitle {
-  position: absolute;
-  font-family: 'Quicksand', sans-serif;
-  left: 8%;
-  top: 33%;
-  max-width: 90%;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
+#reunion-title {
   z-index: 1;
   color: yellow;
-  background-color: #222;
-  box-shadow: 2px 2px 2px black;
 }
 
 .reunionplaytext {
   font-family: 'Arvo', serif;
-  font-size: 1.2em;
+  font-size: 2.4em;
   padding-top: 40px;
   margin-top: 10px; 
   margin-right: auto;
@@ -469,7 +465,10 @@ a:-webkit-any-link {
 
 #nametag-name {
   position: relative;
-  top: 120px;
+  width: 300px;
+  top: 50%;
+  margin-right: auto;
+  margin-left: auto;
   opacity: 1;
 }
 
@@ -489,38 +488,36 @@ a:-webkit-any-link {
   background-size: cover;
 }
 
-#backtotop {
+.extra-play-content {
   position: fixed;
-  visibility: hidden;
-  bottom: 50px;
-  left: 10px;
-  border-radius: 50%;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: rgba(255,255,255,0.6);
-  border: 1px solid white;
+  left: 10px;  
   font-family: "Quicksand", sans-serif;
-  color: black;
-  z-index: 10;
-  box-shadow: 2px 2px 2px black;
-  font-size: 1.2em;
-}
-
-#more-button {
-  position: fixed;
-  font-family: "Quicksand", sans-serif;
-  bottom: 10px;
-  left: 10px;
-  z-index: 11;
-  border-radius: 5%;
-  padding: 5px;
   background-color: rgba(255,255,255,0.6);
   border: 1px solid white;
   color: black;
   z-index: 10;
   box-shadow: 2px 2px 2px black;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.6em;
+}
+
+#backtotop {
+  visibility: hidden;
+  bottom: 50px;
+  font-size: 2.8em;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#more-button {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.8em;
+  bottom: 10px;
+  z-index: 11;
+  border-radius: 5%;
+  padding: 5px;
 }
 
 .graffiti {
@@ -549,45 +546,26 @@ a:-webkit-any-link {
   transform: scale(1.5);
 }
 
-svg {
-  width: 100%;
-  height: auto;
-}
-
 /* Some People Never Change */
 
 .spncplaytext {
   font-family: 'Arvo', serif;
-  font-size: 1.2em;
-  padding: 10px;
-  margin-top: 40px;
-  margin-right: auto;
-  margin-left: auto; 
+  font-size: 2.4em;
+  margin: 0 0 30px; 
+}
+
+.spncplaytext p {
+  padding: 10px 0 0;
 }
 
 .spncsplash {
   background-image: url(../images/parkbench.jpg);
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 #white-screen {
-  width: 100%;
-  height: 100%;
   background-color: white;
   opacity: 0;
-}
-
-#spnc-title {
-  position: absolute;
-  top: 33%;
-  left: 8%;
-  max-width: 90%;
-  font-size: 2em;
-  padding: 20px;
-  background-color: #222;
-  box-shadow: 2px 2px 2px black;
 }
 
 .flashy {
@@ -603,24 +581,28 @@ svg {
   left: 50%;
 }
 
-/* Like Medicine After Death*/
+/* Like Medicine After Death */
 
 .lmad-body {
   background-color: #ccc;
   color: black;
   font-family: 'Arvo', sans-serif;
-  font-size: 1.2em;
+  font-size: 2.4em;
   padding-top: 80px;
-}
-
-.lmad {
-  background-color: #aaa;
 }
 
 .lmad-body p {
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
+}
+
+.lmad {
+  background-color: #aaa;
+}
+
+#lmad-title {
+  color: #ccc;
 }
 
 #lmad-splash {
@@ -631,18 +613,6 @@ svg {
   background-size: cover;
   color: black;
   z-index: 10;
-}
-
-#lmad-title {
-  position: absolute;
-  font-size: 2em;
-  font-family: 'Quicksand', sans-serif;
-  top: 33%;
-  left: 8%;
-  max-width: 90%;
-  padding: 20px;
-  background-color: #cc9900;
-  box-shadow: 2px 2px 2px #333;
 }
 
 .male-table {
@@ -736,6 +706,8 @@ svg {
 
 #books-allcontainer {
   background-image: url(../images/bg5.png);
+  font-family: "Arvo", serif;
+  font-size: 2.4em;
 }
 
 .img-responsive {
@@ -940,10 +912,12 @@ body { font-family: sans-serif; }
   .site-wrapper-inner {
     vertical-align: middle;
   }
+
   /* Handle the widths */
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
   .grid-sizer,
   .grid-item {
     width: 50%;
@@ -954,12 +928,14 @@ body { font-family: sans-serif; }
   }
 
   #mobile-desc {
+    font-size: 2.0em;
     display: block;
   }
 
   .navbar-header {
     float: none;
   }
+
   .navbar-left,.navbar-right {
     float: none !important;
   }
@@ -969,10 +945,12 @@ body { font-family: sans-serif; }
     left: 0;
     margin-left: 0;
   }
+
   .navbar-toggle {
     display: block;
     margin-top: 15px;
   }
+
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
@@ -981,13 +959,16 @@ body { font-family: sans-serif; }
   .navbar-collapse.collapse {
     display: none!important;
   }
+
   .navbar-nav {
     float: none!important;
     margin-top: 7.5px;
   }
+
   .navbar-nav>li {
     float: left;
   }
+
   .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -998,6 +979,10 @@ body { font-family: sans-serif; }
 
   #closebox {
     width: 50px;
+  }
+
+  #ntpa-header {
+    top: 4px;
   }
 
 }
@@ -1023,23 +1008,17 @@ body { font-family: sans-serif; }
     width: 100%;
   }
 
-  .navbar-brand {
-    width: 80%;
+  #ntpa-header {
+    top: 8px;
   }
-}
 
-@media screen and (min-width: 600px) {
+  .navbar-text {
+    font-size: 2em;
+    margin: 0;
+  }
 
-}
-
-@media screen and (min-width: 800px) {
-
-}
-
-@media screen and (min-width: 1000px) {
-
-}
-
-@media screen and (min-width: 1200px) {
-
+  #nametag {
+    width: 300px;
+    height: 202px;
+  }
 }

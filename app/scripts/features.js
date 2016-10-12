@@ -4,36 +4,16 @@ $(function () { // wait for document ready
   if (!Modernizr.touchevents){
     var controller = new ScrollMagic.Controller();
     // image animation
-    var hideAni = TweenMax.to('#second', 1, {autoAlpha: 0});
-    var hideAni2 = TweenMax.to('#fourth', 1, {autoAlpha: 0});
-    var hideAni3 = TweenMax.to('#sixth', 1, {autoAlpha: 0});
+    var hideAni = TweenMax.to('#eighth', 1, {autoAlpha: 0});
 
     // image animation
     var aniScene = new ScrollMagic.Scene({
         triggerHook: 0,
-        triggerElement: '#reunion',
+        triggerElement: '#ratings',
         offset: 50,
         duration: 150
       })
       .setTween(hideAni)
-      .addTo(controller);
-
-    var aniScene2 = new ScrollMagic.Scene({
-        triggerHook: 0,
-        triggerElement: '#lmad',
-        offset: 50,
-        duration: 150
-      })
-      .setTween(hideAni2)
-      .addTo(controller);
-
-    var aniScene3 = new ScrollMagic.Scene({
-        triggerHook: 0,
-        triggerElement: '#spnc',
-        offset: -100,
-        duration: 100
-      })
-      .setTween(hideAni3)
       .addTo(controller);            
 
     // create scene to pin and link animation

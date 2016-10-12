@@ -9,22 +9,11 @@
     <meta name="author" content="Peter Andre">
 
     <title>Reunion - A Short Play</title>
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300|Arvo:400,400italic,700' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300|Arvo:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="../styles/cover.css" rel="stylesheet">        
     <link rel="icon" href="../favicon.png" sizes="32x32" type="image/png">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
-    <link href="../styles/cover.css" rel="stylesheet">
     <script src="../scripts/modernizr-custom.js" type="text/javascript"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -36,12 +25,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">
-            <img alt="Not That Peter Andre" src="../images/header_logo.png">
-          </a>  
+          <ul class="nav navbar-nav navbar-left">
+            <li id="ntpa-header">
+              <a href="../index.html">
+                <picture>
+                  <source media="(max-width: 580px)" srcset="../images/vector_nav_logo_small.png">
+                  <source media="(max-width: 999px)" srcset="../images/vector_nav_logo.png">
+                  <img id="ntpa-image" alt="Not That Peter Andre" src="../images/vector_short_name.png">
+                </picture>
+              </a>
+            </li>
+          </ul>
         </div>        
         <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-center">
             <li class="navbar-text"><a href="features.html">FEATURES</a></li>
             <li class="navbar-text"><a href="plays.html">PLAYS</a></li>
             <li class="navbar-text"><a href="books.html">BOOKS</a></li>
@@ -57,7 +54,7 @@
       </div>
     </nav>
 
-<div class="modal2">
+<div class="fullscreen modal2">
   <div class="modal-content2">
     <h3>This play is <b>FREE</b> to read, <b>FREE</b> to perform.</h3>
     <p>
@@ -80,8 +77,8 @@
 </div>
 
 <div id="trigger3"></div>
-  <div id="reuniontitle"><h1>Reunion</h1></div>
-<div id="pin3" class="reunionsplash">
+  <h1 class="play-title" id="reunion-title">Reunion</h1>
+<div id="pin3" class="fullscreen reunionsplash">
   <div id="dweebs" class="graffiti">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="607" height="280">
       <g class="currentLayer">
@@ -145,11 +142,11 @@
   </div>
 </div>
 
-<a href="#"><div id="backtotop">
+<a href="#"><div class="extra-play-content" id="backtotop">
   <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 </div></a>
 
-  <div id="more-button">
+  <div class="extra-play-content" id="more-button">
     MORE&hellip;
   </div>
 
@@ -599,7 +596,7 @@ Oh my god you are so clearly not. We're talking about high school. A lifetime ag
 <div class="reunionplaytext">
   <p><span class="stagedir">Instinctively, Linda kisses Dan on the mouth. She pulls back to see his reaction. He's stunned. She kisses him again, deeper and longer this time. She pulls back slowly.</span></p>
 </div>
-<div class="reunionsplash">
+<div class="fullscreen reunionsplash">
 </div>
 <div class="reunionplaytext">
   <p>LINDA<br/>
