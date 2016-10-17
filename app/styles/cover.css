@@ -131,6 +131,8 @@ a:-webkit-any-link {
 /* Home Page */
 
 .inner-cover {
+  width: 100%;
+  height: 500px;
   background-image: url(../images/bg1.jpg);
 }
 
@@ -170,6 +172,14 @@ a:-webkit-any-link {
   font-family: "Quicksand", sans-serif;
 }
 
+#mail-to {
+  color: rgb(66, 122, 244);
+}
+
+#mail-to:hover {
+  text-decoration: underline;
+}
+
 .cover-container {
   max-height: 600px;
 /*  width: 90%;*/
@@ -179,6 +189,7 @@ a:-webkit-any-link {
 #covervid {
   position: relative;
   z-index: 0;
+  display: none;
 }
 
 #cover-logo {
@@ -192,6 +203,11 @@ a:-webkit-any-link {
   display: block;
   font-family: 'Arvo', sans-serif;
   font-size: 3.6em;
+  text-shadow: 3px 3px 0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
 }
 
 #mobile-desc {
@@ -419,12 +435,16 @@ a:-webkit-any-link {
 }
 
 .link-typical {
-  color: blue;
+  color: rgb(66, 122, 244);
 }
 
 .link-typical:hover {
-  color: blue;
+  color: rgb(66, 122, 244);
   text-decoration: underline;
+}
+
+.link-typical:active {
+  color: rgb(66, 122, 244);
 }
 
 /* Reunion */
@@ -694,6 +714,10 @@ a:-webkit-any-link {
   padding-bottom: 15px;
 }
 
+#heading-alt {
+  margin-bottom: 20px;
+}
+
 #books-container a {
   color: white;
   background-color: rgb(205,83,104);
@@ -737,6 +761,29 @@ a:-webkit-any-link {
   width: 100%;
   height: 100%;
   background-color: black;
+}
+
+#ratings-modal {
+  display: block;
+  opacity: 0;
+}
+
+.modal-content3 {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content4 {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px
+}
+
+#gold-text {
+  font-weight: bolder;
+  color: rgb(244, 215, 66);
 }
 
 #movie-theater {
@@ -993,11 +1040,25 @@ body { font-family: sans-serif; }
   }
 
   .inner-cover {
-    height: 500px;
+    width: 100%;
+    height: 300px;
   }
 
   .inner-cover video {
     display: none;
+  }
+
+  .modal-content4 {
+    margin-top: 20px;
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .modal-content4 > h3 {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4em;
   }
 
 }

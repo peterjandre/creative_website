@@ -1,16 +1,5 @@
 $(function () { // wait for document ready
     
-    var modalCookie = Cookies.get("readModal")
-
-    if (modalCookie == "yes") {
-      console.log("cookie is on system")
-    } else {
-      Cookies.set('readModal', 'yes', {expires: 7});
-      $('#playModal').modal("show");
-      console.log("cookie has been set, modal is shown")
-    };
-
-
     $('#backtotop').click(function(){
       $("html, body").animate({ scrollTop: 0 }, 'slow');
       return false;

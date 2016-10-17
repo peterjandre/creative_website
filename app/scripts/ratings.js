@@ -16,6 +16,7 @@ $(function () { // wait for document ready
     var $ratings = (".ratings")
     var $bars = ("#black-bars")
     var $ratingsNav = ("#nav-container")
+    var $modal = (".modal2")
 
     var tl = new TimelineMax()
 
@@ -56,11 +57,27 @@ $(function () { // wait for document ready
       .to($rotator, 0.7, {rotation: 180, transformOrigin:"bottom 50%", ease: Power0.easeNone, onComplete: resetRotation})
       .to($two, 0.1, {autoAlpha: 1}, '-=0.6')
       .to($allSVG, 0.1, {opacity: 0}, '-=0.5')
-      .to($bars, 0.1, {autoAlpha: 1})
-      .to($ratings1, 0.5, {autoAlpha: 1})
-      .to($allSVG, 0.1, {autoAlpha: 1})
-      .to($ratingsNav, 0.5, {autoAlpha: 1});
-                             
+      .to($modal, 1, {autoAlpha: 1});
+
+    function closeModal () {
+      var tl2 = new TimelineMax()
+
+      tl2.to($modal, 0.5, {autoAlpha: 0})
+        .to($bars, 0.1, {autoAlpha: 1}, '-=0.1')
+        .to($ratings1, 0.5, {autoAlpha: 1})
+        .to($allSVG, 0.1, {autoAlpha: 1})
+        .to($ratingsNav, 0.5, {autoAlpha: 1});
+    }
+
+    $("#ok-button").click(function(){
+      closeModal();
+    });
+
+    $("#closebox").click(function(){
+      closeModal();
+    });
+
+
     var i = 0;
     var slides = $(".ratings");
     var length = slides.length - 1;
