@@ -541,6 +541,7 @@ a:-webkit-any-link {
 }
 
 .graffiti {
+  width: 100%;
   position: absolute;
 }
 
@@ -550,7 +551,7 @@ a:-webkit-any-link {
 }
 
 #assholes {
-  right: 200px;
+  left: 50%;
   top: 250px;
 }
 
@@ -560,9 +561,9 @@ a:-webkit-any-link {
 }
 
 #losers {
-  top: 150px;
+  top: 250px;
   left: 50%;
-  margin-left: -358px;
+  margin-left: -300px;
   transform: scale(1.5);
 }
 
@@ -1081,5 +1082,9 @@ body { font-family: sans-serif; }
   #nametag {
     width: 300px;
     height: 202px;
+  }
+
+  .graffiti {
+    display: none;
   }
 }
