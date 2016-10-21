@@ -541,7 +541,7 @@ a:-webkit-any-link {
 }
 
 .graffiti {
-  width: 100%;
+  width: 600px;
   position: absolute;
 }
 
@@ -918,10 +918,10 @@ body { font-family: sans-serif; }
  * Affix and center
  */
 
-@media (hover: hover) {
+@media screen and (hover: hover) {
 
   .grid-item img {
-    opacity: 1
+    opacity: 1;
   }
 
   .grid-text {
@@ -949,6 +949,7 @@ body { font-family: sans-serif; }
     background-color: rgb(205,83,104);
     border-color: white;
     transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; /* Safari */
   }
 
 }
