@@ -133,7 +133,7 @@ a:-webkit-any-link {
 .inner-cover {
   width: 100%;
   height: 500px;
-  background-image: url(../images/bg1.jpg);
+  background-color: #333;
 }
 
 .grid-text {
@@ -189,14 +189,13 @@ a:-webkit-any-link {
 #covervid {
   position: relative;
   z-index: 0;
-  display: none;
 }
 
 #cover-logo {
   position: absolute;
   z-index: 1;
   top: 15%;
-  left: 5%;
+  left: 1%;
 }
 
 #cover-text {
@@ -452,6 +451,11 @@ a:-webkit-any-link {
 .reunionsplash {
   background-image: url(../images/reunion_splash.jpg);
   background-size: cover;
+}
+
+.reunion-svg {
+  width: 750px;
+  margin-left: -100px;
 }
 
 #spotify {
@@ -1043,7 +1047,8 @@ body { font-family: sans-serif; }
 
   .inner-cover {
     width: 100%;
-    height: 300px;
+    height: 400px;
+    background-image: url(../images/splashpic3.png);
   }
 
   .inner-cover video {
@@ -1073,6 +1078,10 @@ body { font-family: sans-serif; }
 
   #ntpa-header {
     top: 8px;
+  }
+
+  .inner-cover {
+    background-image: url(../images/splashpic4.png);
   }
 
   .navbar-text {
